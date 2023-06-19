@@ -15,8 +15,8 @@ class LoginPage {
     return $("#login-button");
   }
 
-  getErrorMessage() {
-    return "Epic sadface: Sorry, this user has been locked out.";
+  get errorMessage() {
+    return $("h3");
   }
 
   async login(username, password) {
@@ -26,4 +26,4 @@ class LoginPage {
   }
 }
 
-export default LoginPage;
+export default new LoginPage();

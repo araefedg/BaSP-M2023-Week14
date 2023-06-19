@@ -2,13 +2,9 @@ import LoginPage from "../pageobjects/loginPage";
 
 describe("LoginPage with locked out user ", () => {
   it("should fail to login with locked out user", async () => {
-    const loginPage = new LoginPage();
-    await loginPage.open("https://www.saucedemo.com/");
-    await loginPage.login("locked_out_user", "secret_sauce");
-
-    const errorMessage = await loginPage.getErrorMessage();
-
-    expect(errorMessage).toEqual(
+    await LoginPage.open("https://www.saucedemo.com/");
+    await LoginPage.login("locked_out_user", "secret_sauce");
+    expect(await LoginPage.errorMessage.getText()).toContain(
       "Epic sadface: Sorry, this user has been locked out."
     );
   });

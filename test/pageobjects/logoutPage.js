@@ -17,4 +17,4 @@ class LogoutPage {
   }
 }
 
-export default LogoutPage;
+export default new LogoutPage();

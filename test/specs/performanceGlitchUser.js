@@ -55,7 +55,7 @@ describe("CheckoutPage2 with performace glitch user", () => {
 });
 
 describe("CheckoutComplete with performace glitch user", () => {
-  it("should remove one item from the list and checkout", async () => {
+  it("should click on back home button and return to products", async () => {
     await CheckoutCompletePage.open(
       "https://www.saucedemo.com/checkout-complete.html"
     );

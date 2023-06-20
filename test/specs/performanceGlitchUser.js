@@ -32,6 +32,13 @@ describe("InventoryPage with performace glitch  user", () => {
 });
 
 describe("CartPage with performace glitch user", () => {
+  it("should click on continue shopping button and return to inventory", async () => {
+    await CartPage.open("https://www.saucedemo.com/cart.html");
+    await CartPage.continueShopping();
+  });
+});
+
+describe("CartPage with performace glitch user", () => {
   it("should remove one item from the list and checkout", async () => {
     await CartPage.open("https://www.saucedemo.com/cart.html");
     await CartPage.buyItems();

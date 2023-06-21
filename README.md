@@ -2,7 +2,7 @@
 
 This is the repository of the Week 14 project of the Become a Sofware Developer 2023 course by Radium Rocket.
 
-This project consists of end-to-end (e2e) test automation using the WebdriverIO framework and Jasmine on the Swag Labs website.
+This project consists of end-to-end (e2e) test automation using the WebdriverIO framework and Jasmine on the Swag Labs website https://www.saucedemo.com/.
 
 The goal is to perform comprehensive automated testing to ensure software quality.
 

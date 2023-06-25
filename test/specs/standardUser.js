@@ -6,7 +6,7 @@ import CheckoutPage from "../pageobjects/checkoutPage";
 import CheckoutPage2 from "../pageobjects/checkoutPage2";
 import CheckoutCompletePage from "../pageobjects/checkoutCompletePage";
 
-/*describe("LoginPage with standard user", () => {
+describe("LoginPage with standard user", () => {
   it("should fail login with empty password input", async () => {
     await LoginPage.open("https://www.saucedemo.com/");
     await LoginPage.login("standard_user", "");
@@ -31,7 +31,7 @@ describe("LoginPage with standard user", () => {
     expect(await LoginPage.errorMessage.getText()).toContain(
       "Epic sadface: Username and password do not match any user in this service"
   )});
-});*/
+});
 
 describe("LoginPage with standard user", () => {
   it("should login with valid credentials", async () => {
@@ -113,7 +113,7 @@ describe("CheckoutPage with standard user", () => {
     await CheckoutPage.continueButtonClick();
   });
 });
-/*
+
 describe("CheckoutPage2 with standard user", () => {
   it("should remove one item from the list and checkout", async () => {
     await CheckoutPage2.open(
@@ -142,6 +142,6 @@ describe("LogoutPage", () => {
   });
 });
 
-*/
+
 
 

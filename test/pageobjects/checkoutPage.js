@@ -15,14 +15,30 @@ class CheckoutPage {
     return $("#postal-code");
   }
 
+  get cancelButton() {
+    return $("#cancel");
+  }
+
   get continueButton() {
     return $("#continue");
+  }
+
+  get errorMessage() {
+    return $("h3");
+  }
+
+  async cancelButtonClick() {
+    await this.cancelButton.click();
   }
 
   async fillForm(firstName, lastName, zip) {
     await this.inputName.setValue(firstName);
     await this.inputLastName.setValue(lastName);
     await this.inputZip.setValue(zip);
+  }
+
+  async continueButtonClick() {
+    await this.continueButton.click();
   }
 }
 

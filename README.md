@@ -33,13 +33,16 @@ This file contains the WebDriverIO configuration for running the tests. You can 
 This directory contains the test specification files. You can add, modify or delete files according to the scenarios you want to test.
 ***
 ## Running tests
-To run the tests, you can use the following command:
+To run all the tests, you can use the following command:
 ````bash
 npm run wdio
+````
+To run standard user tests, you can use this command:
+````bash
+npx wdio wdio.conf.js --spec ./test/specs/standardUser.js
 ````
 This will start the execution of the tests using WebDriverIO and display the results in the console.
 ***
 ## Author
 
 Araceli Fernández
-

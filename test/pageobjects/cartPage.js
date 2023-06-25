@@ -3,10 +3,36 @@ class CartPage {
     return browser.url(url);
   }
 
-  get removeButtonBikeLight() {
+  get removeFromCartButtonBackpack() {
+    return $("#remove-sauce-labs-backpack");
+  }
+
+  get removeFromCartButtonBikeLight() {
     return $("#remove-sauce-labs-bike-light");
   }
 
+  get removeFromCartButtonBoltTshirt() {
+    return $("#remove-sauce-labs-bolt-t-shirt");
+  }
+
+  get removeFromCartButtonFleeceJacket() {
+    return $("#remove-sauce-labs-fleece-jacket");
+  }
+
+  get removeFromCartButtonOnesie() {
+    return $("#remove-sauce-labs-onesie");
+  }
+
+  get removeFromCartButtons() {
+    return {
+      "backpack": this.removeFromCartButtonBackpack,
+      "bike-light": this.removeFromCartButtonBikeLight,
+      "bolt-tshirt": this.removeFromCartButtonBoltTshirt,
+      "fleece-jacket": this.removeFromCartButtonFleeceJacket,
+      "onesie": this.removeFromCartButtonOnesie
+    };
+  }
+//------------------------------------------------------------
   get continueShoppingButton() {
     return $("#continue-shopping");
   }
@@ -25,8 +51,12 @@ class CartPage {
     await Promise.race([this.continueShoppingButton.click(), timeoutPromise]);
   }
 
-  async buyItems() {
-    await this.removeButtonBikeLight.click();
+  async buyItems(option) {
+    const button = this.removeFromCartButtons[option];
+    await button.click();
+  }
+
+  async chekoutClickButton() {
     await this.checkoutButton.click();
   }
 }

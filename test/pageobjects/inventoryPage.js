@@ -2,11 +2,11 @@ class InventoryPage {
   open(url) {
     return browser.url(url);
   }
-
+// me traje el boton con el data test
   get productSortButton() {
     return $('[data-test="product_sort_container"]');
   }
-
+//me traje todas las opciones con el option
   get optionToSelectNameAToZ() {
     return $('option[value="az"]');
   }
@@ -42,7 +42,11 @@ class InventoryPage {
   get addToCartButtonOnesie() {
     return $("#add-to-cart-sauce-labs-onesie");
   }
- 
+
+  get addToCartButtonAllTheTshirt() {
+  return $('[id="add-to-cart-test.allthethings()-t-shirt-(red)"]');
+}
+
 
   // REMOVE FROM CART BUTTON
   get removeFromCartButtonBackpack() {
@@ -63,6 +67,10 @@ class InventoryPage {
 
   get removeFromCartButtonOnesie() {
     return $("#remove-sauce-labs-onesie");
+  }
+
+  get removeFromCartButtonAllTheTshirt() {
+    return $('[id="remove-test.allthethings()-t-shirt-(red)"]');
   }
 
     // SHOPPING BUTTON
@@ -100,7 +108,8 @@ class InventoryPage {
       "bike-light": this.addToCartButtonBikeLight,
       "bolt-tshirt": this.addToCartButtonBoltTshirt,
       "fleece-jacket": this.addToCartButtonFleeceJacket,
-      "onesie": this.addToCartButtonOnesie
+      "onesie": this.addToCartButtonOnesie,
+      "allthethings-tshirt": this.addToCartButtonAllTheTshirt
     };
   }
 
@@ -115,7 +124,8 @@ class InventoryPage {
       "bike-light": this.removeFromCartButtonBikeLight,
       "bolt-tshirt": this.removeFromCartButtonBoltTshirt,
       "fleece-jacket": this.removeFromCartButtonFleeceJacket,
-      "onesie": this.removeFromCartButtonOnesie
+      "onesie": this.removeFromCartButtonOnesie,
+      "allthethings-tshirt": this.removeFromCartButtonAllTheTshirt
     };
   }
 

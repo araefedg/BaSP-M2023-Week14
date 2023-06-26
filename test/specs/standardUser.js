@@ -55,8 +55,8 @@ describe("InventoryPage with standard user", () => {
     await InventoryPage.open("https://www.saucedemo.com/inventory.html");
     await InventoryPage.selectAddToCart("backpack");
     await InventoryPage.selectAddToCart("bike-light");
-    await InventoryPage.selectAddToCart("bolt-tshirt");
-    await InventoryPage.selectRemoveFromCart("backpack");
+    await InventoryPage.selectAddToCart("allthethings-tshirt");
+    await InventoryPage.selectRemoveFromCart("allthethings-tshirt");
     await InventoryPage.shoppingButtonClick();
   });
 });
@@ -67,7 +67,7 @@ describe("CartPage with standard user", () => {
     await CartPage.buyItems("bike-light");
     await CartPage.continueShopping();
     await CartPage.open("https://www.saucedemo.com/inventory.html");
-    await InventoryPage.selectAddToCart("backpack");
+    await InventoryPage.selectAddToCart("allthethings-tshirt");
     await InventoryPage.shoppingButtonClick();
     await CartPage.chekoutClickButton();
   });

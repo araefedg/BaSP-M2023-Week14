@@ -42,6 +42,11 @@ To run standard user tests, you can use this command:
 npx wdio wdio.conf.js --spec ./test/specs/standardUser.js
 ````
 This will start the execution of the tests using WebDriverIO and display the results in the console.
+## Allure report
+To run the allure reports, you can use the following command:
+````bash
+npx allure generate allure-results && npx allure open
+````
 ***
 ## Author
 

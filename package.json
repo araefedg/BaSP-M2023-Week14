@@ -29,5 +29,8 @@
     "chromedriver": "^114.0.2",
     "wdio-chromedriver-service": "^8.1.1",
     "wdio-wait-for": "^3.0.4"
+  },
+  "dependencies": {
+    "allure-commandline": "^2.22.4"
   }
 }

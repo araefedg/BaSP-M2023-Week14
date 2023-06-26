@@ -115,16 +115,22 @@ describe("CheckoutPage with standard user", () => {
 });
 
 describe("CheckoutPage2 with standard user", () => {
-  it("should remove one item from the list and checkout", async () => {
+  it("should cancel the operation, return to the inventory, add a new item and finish ", async () => {
     await CheckoutPage2.open(
       "https://www.saucedemo.com/checkout-step-two.html"
     );
+    await CheckoutPage2.cancelBuy();
+    await InventoryPage.selectAddToCart("fleece-jacket");
+    await InventoryPage.shoppingButtonClick();
+    await CartPage.chekoutClickButton();
+    await CheckoutPage.fillForm("firstName", "lastName", "0000");
+    await CheckoutPage.continueButtonClick();
     await CheckoutPage2.finishBuy();
   });
 });
 
 describe("CheckoutComplete with standard user", () => {
-  it("should remove one item from the list and checkout", async () => {
+  it("should finish the operation and return to inventory", async () => {
     await CheckoutCompletePage.open(
       "https://www.saucedemo.com/checkout-complete.html"
     );
@@ -133,7 +139,7 @@ describe("CheckoutComplete with standard user", () => {
 });
 
 describe("LogoutPage", () => {
-  it("should logout and redirect to the main page", async () => {
+  it("should logout and redirect to the login page", async () => {
     await LogoutPage.open("https://www.saucedemo.com/inventory.html");
     await LogoutPage.logout();
 

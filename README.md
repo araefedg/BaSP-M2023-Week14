@@ -12,7 +12,7 @@ The goal is to perform comprehensive automated testing to ensure software qualit
 
 1. Clone this repository on your local machine:
 ````bash
-git clone https://github.com/araefe1992/BaSP-M2023-Week14.git
+git clone https://github.com/araefedg/BaSP-M2023-Week14.git
 ````
 2. Navigate to the project directory:
 ````bash
